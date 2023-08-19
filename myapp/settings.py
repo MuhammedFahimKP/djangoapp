@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-e#!za(s2p#go3+#l7joml8*$-uce-9on!e3k*#nm_$gwa(8)ud
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 
@@ -124,12 +124,15 @@ USE_TZ = True
 
 AUTH_USER_MODEL='ulog.CUser'
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static"), # your static/ files folder
 ]
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

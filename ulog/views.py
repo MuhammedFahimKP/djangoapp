@@ -10,6 +10,7 @@ from django.views.decorators.cache import never_cache
 
 
 
+
 # Create your views here.
 
 @never_cache
