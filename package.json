@@ -1,0 +1,5 @@
+{ "scripts": {"start":"npx tailwindcss -i ./static/src/input.css -o ./static/css/style.css --watch" },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
