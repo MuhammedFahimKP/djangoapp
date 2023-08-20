@@ -58,7 +58,7 @@ def signup(request):
             elif len(password2)<8:
                 messages.info(request,'password must be 8 or more characters')
             else:
-                CUser.objects.create(email=email,password=password2)
+                CUser.objects.create(email=email,password=password2,username=email)
                 return redirect('signin')          
     return render(request,'signup.html')
 
